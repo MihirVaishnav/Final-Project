@@ -1,6 +1,8 @@
 <resources>
-	<string name="app_name">ML Kit</string>
-	<string name="action_camera">Camera</string>
+	<string name="app_name">MML</string>
+	<string name="main">Welcome to MML                                      ( MODULES OF ML-KIT )                                       Lets see our Functionality</string>
+	<string name="title_activity_face_detection">FaceDetection</string>	<string name="action_camera">Camera</string>
+
 	<string name="action_gallery">Gallery</string>
 	<string name="btn_device">Device</string>
 	<string name="btn_cloud">Cloud</string>

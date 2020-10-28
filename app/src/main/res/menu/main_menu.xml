@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_func"
+            android:title="FUNCTIONS"
+            android:icon="@drawable/ic_baseline_home_24"/>
+        <item
+            android:id="@+id/nav_face"
+            android:title="FACE DETECTION"
+            android:icon="@drawable/ic_baseline_tag_faces_24"/>
+        <item
+            android:id="@+id/nav_text"
+            android:title="TEXT RECOGNITION"
+            android:icon="@drawable/ic_baseline_image_search_24"/>
+        <item
+            android:id="@+id/nav_barcode"
+            android:title="BARCODE SCANNER"
+            android:icon="@drawable/ic_baseline_filter_center_focus_24"/>
+    </group>
+</menu>

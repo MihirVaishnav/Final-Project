@@ -24,18 +24,20 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
 
-		<activity android:name=".MainActivity">
+		<activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar" android:screenOrientation="portrait">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity android:name=".TextActivity" />
-		<activity android:name=".BarcodeActivity" />
-		<activity android:name=".FaceActivity" />
-		<activity android:name=".ImageActivity" />
-        <activity android:name=".CustomActivity">
+		<activity android:name=".BoardingScreen" android:theme="@style/Theme.AppCompat.NoActionBar" android:screenOrientation="portrait"/>
+		<activity android:name=".Functions" android:theme="@style/Theme.AppCompat.NoActionBar" android:screenOrientation="portrait"/>
+		<activity android:name=".TextActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".BarcodeActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".FaceActivity" android:screenOrientation="portrait"/>
+		<activity android:name=".ImageActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CustomActivity" android:screenOrientation="portrait">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW" />
 
@@ -52,6 +54,9 @@
 		<meta-data
 			android:name="com.google.firebase.ml.vision.DEPENDENCIES"
 			android:value="ocr, face, barcode, label" />
+		<meta-data
+			android:name="preloaded_fonts"
+			android:resource="@array/preloaded_fonts" />
 
 		<provider
 			android:name="androidx.core.content.FileProvider"

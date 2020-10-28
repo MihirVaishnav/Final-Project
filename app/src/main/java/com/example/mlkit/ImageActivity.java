@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,7 +15,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
-import com.google.firebase.ml.vision.label.FirebaseVisionCloudImageLabelerOptions;
 import com.google.firebase.ml.vision.label.FirebaseVisionImageLabel;
 import com.google.firebase.ml.vision.label.FirebaseVisionImageLabeler;
 import com.google.firebase.ml.vision.label.FirebaseVisionOnDeviceImageLabelerOptions;
@@ -29,7 +29,8 @@ public class ImageActivity extends BaseActivity implements View.OnClickListener 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_cloud);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		setContentView(R.layout.activity_text_detect);
 
 		mTextView = findViewById(R.id.text_view);
 		mImageView = findViewById(R.id.image_view);
@@ -61,27 +62,6 @@ public class ImageActivity extends BaseActivity implements View.OnClickListener 
 					});
 				}
 				break;
-			/*case R.id.btn_cloud:
-				if (mBitmap != null) {
-					MyHelper.showDialog(this);
-					FirebaseVisionCloudImageLabelerOptions options = new FirebaseVisionCloudImageLabelerOptions.Builder().setConfidenceThreshold(0.7f).build();
-					FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(mBitmap);
-					FirebaseVisionImageLabeler detector = FirebaseVision.getInstance().getCloudImageLabeler(options);
-					detector.processImage(image).addOnSuccessListener(new OnSuccessListener<List<FirebaseVisionImageLabel>>() {
-						@Override
-						public void onSuccess(List<FirebaseVisionImageLabel> labels) {
-							MyHelper.dismissDialog();
-							extractLabel(labels);
-						}
-					}).addOnFailureListener(new OnFailureListener() {
-						@Override
-						public void onFailure(@NonNull Exception e) {
-							MyHelper.dismissDialog();
-							mTextView.setText(e.getMessage());
-						}
-					});
-				}
-				break;*/
 		}
 	}
 

@@ -82,7 +82,7 @@ public class CustomActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_device);
+		setContentView(R.layout.activity_common);
 		mImageView = findViewById(R.id.image_view);
 		mTextView = findViewById(R.id.text_view);
 

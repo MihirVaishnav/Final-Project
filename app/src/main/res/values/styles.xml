@@ -25,4 +25,9 @@
 		<item name="android:layout_height">wrap_content</item>
 	</style>
 
+	<style name="navigationTheme">
+		<item name="colorPrimary">#FFFFFF</item>
+		<item name="colorControlHighlight">#000000</item>
+	</style>
+
 </resources>
